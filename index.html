@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap and Masonry</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        .grid {
+            margin-left: -15px; /* Offset Bootstrap gutter */
+            margin-right: -15px; /* Offset Bootstrap gutter */
+        }
+        .grid-item {
+            padding: 15px; /* Add back padding for individual grid items */
+        }
+        .grid-item img {
+            width: 100%;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row grid">
+            <div class="col-md-3 col-xl-3 col-sm-4 grid-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdF7oXjYXKTrcMOsBk24Xbu3z6-VoG5Wze1rFvTVV4ghzl6M3wn1-gZ5qtQkUU5dNCWYU&usqp=CAU" alt="">
+            </div>
+            <div class="col-md-3 col-xl-3 col-sm-4 grid-item">
+                <img src="https://i.pinimg.com/236x/3c/87/0c/3c870c987fc64a559fc254505084b88b.jpg" alt="">
+            </div>
+            <div class="col-md-3 col-xl-3 col-sm-4 grid-item">
+                <img src="https://i.pinimg.com/236x/30/d2/26/30d2269c8670eaafe93af161d192e0a4.jpg" alt="">
+            </div>
+            <div class="col-md-3 col-xl-3 col-sm-4 grid-item">
+                <img src="https://wallpaper.forfun.com/fetch/9a/9afb26229ec0e7328b6fd6462b247dc1.jpeg" alt="">
+            </div>
+            
+            <div class="col-md-3 col-xl-3 col-sm-4 grid-item">
+                <img src="https://i.pinimg.com/236x/1e/ad/90/1ead90bae3f87e40994719d29fd822be.jpg" alt="">
+            </div>
+            <div class="col-md-3 col-xl-3 col-sm-4 grid-item">
+                <img src="https://i.pinimg.com/236x/b8/ab/a5/b8aba53d5fcf364839722df224973c72.jpg" alt="">
+            </div>
+            <div class="col-md-3 col-xl-3 col-sm-4 grid-item">
+                <img src="https://i.pinimg.com/236x/31/aa/90/31aa90cb2076c7900ae328dac9bcb0f6.jpg" alt="">
+            </div>
+            <div class="col-md-3 col-xl-3 col-sm-4 grid-item">
+                <img src="https://i.pinimg.com/236x/c9/89/aa/c989aa0330692d2ea753d5c5ec7fded7.jpg" alt="">
+            </div>
+            <div class="col-md-3 col-xl-3 col-sm-4 grid-item">
+                <img src="https://i.pinimg.com/236x/44/f1/37/44f1375bfbb519368aff7f502a74ca2e.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+    <script>
+        // Initialize Masonry
+        var grid = document.querySelector('.grid');
+        var msnry = new Masonry(grid, {
+            itemSelector: '.grid-item',
+            percentPosition: true,
+            gutter: 0
+        });
+    </script>
+</body>
+</html>
